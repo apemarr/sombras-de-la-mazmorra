@@ -10,6 +10,7 @@ public class TestManager : MonoBehaviour
     public TMP_Text textoPregunta;
     public TMP_InputField inputRespuesta;
     public Button botonComprobar;
+    public Button botonCerrarJuego;
     public TMP_Text textoResultado;
 
     private string[] preguntas;
@@ -48,6 +49,7 @@ public class TestManager : MonoBehaviour
         };
 
         botonComprobar.onClick.AddListener(Empezar);
+        botonCerrarJuego.onClick.AddListener(Application.Quit);
         posicionCampoRespuesta = inputRespuesta.GetComponent<Transform>();
     }
 
@@ -101,7 +103,8 @@ public class TestManager : MonoBehaviour
 
             textoIntroduccion.GetComponent<Transform>().position = posicionCampoRespuesta.position;
             textoIntroduccion.gameObject.SetActive(true);
-            
+            botonCerrarJuego.gameObject.SetActive(true);
+
             textoIntroduccion.text = $"Fin de la partida. Has sacado una puntuación de {puntuacion}/{preguntas.Length}";
         }
         
