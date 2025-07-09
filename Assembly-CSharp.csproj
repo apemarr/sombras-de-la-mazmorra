@@ -54,6 +54,7 @@
     <Compile Include="Assets\scripts\DisplayLeftDoorManager.cs" />
     <Compile Include="Assets\scripts\SceneSwitcher.cs" />
     <Compile Include="Assets\scripts\TestManager.cs" />
+    <Compile Include="Assets\scripts\StartManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
